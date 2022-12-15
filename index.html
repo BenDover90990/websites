@@ -3,15 +3,22 @@
   <head>
     <title>dfuigsdfjkg</title>
   </head>
-  <body style="margin:0px;background-image:url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages3.memedroid.com%2Fimages%2FUPLOADED405%2F5d425bfb1cc2a.jpeg&f=1&nofb=1&ipt=4e7366dc8273ed3802009d6f59e869cb27d08241aaf5e8c00cb033fc39f18758&ipo=images);background-size:cover;">
+  <body style="margin:0px;background-color:#000;">
     
-    <audio id="song" src="song.mp3"></audio>
+    <audio id="song" src=""></audio>
     <script>
-      // Get a reference to the audio element
       var song = document.getElementById("song");
-
+      function setsound(url){
+        document.getElementById('song').src=url;
+        song.play()
+      }
+      // Get a reference to the audio element
+      var interval = 30000 + Math.random() * 30000;
+      function play(){
+        song.play()
+      }
+      setInterval(play, interval); // run the code every 30-60 seconds
       // Start playing the audio when the page loads
-      song.play();
     </script>
   </body>
 </html>
